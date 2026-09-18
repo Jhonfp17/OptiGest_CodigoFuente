@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Compilación portable: no depende de configuraciones locales de NetBeans. -->
+<project name="OptiGestRailway" default="dist" basedir=".">
+    <property name="build.dir" value=".railway-build"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="payara.home" value="/opt/payara/appserver/glassfish"/>
+
+    <path id="compile.classpath">
+        <fileset dir="${payara.home}/modules" includes="*.jar"/>
+        <fileset dir="Librerias" includes="*.jar"/>
+    </path>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${build.dir}/WEB-INF/classes"/>
+        <javac srcdir="src/java" destdir="${build.dir}/WEB-INF/classes"
+               source="11" target="11" encoding="UTF-8" includeantruntime="false">
+            <classpath refid="compile.classpath"/>
+        </javac>
+    </target>
+
+    <target name="prepare" depends="compile">
+        <copy todir="${build.dir}">
+            <fileset dir="web"/>
+        </copy>
+        <mkdir dir="${build.dir}/WEB-INF/lib"/>
+        <copy todir="${build.dir}/WEB-INF/lib">
+            <fileset dir="Librerias" includes="*.jar"/>
+        </copy>
+    </target>
+
+    <target name="dist" depends="clean,prepare">
+        <mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.dir}/OptiGest.war" basedir="${build.dir}"/>
+    </target>
+</project>

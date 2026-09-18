@@ -1,0 +1,7 @@
+.git
+.gfclient
+build
+nbproject/private
+test
+*.log
+*.md

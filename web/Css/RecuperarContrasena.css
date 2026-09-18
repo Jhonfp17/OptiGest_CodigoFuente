@@ -1,0 +1,213 @@
+
+
+:root {
+    --bg: #f3f6fb;
+    --card: #ffffff;
+    --text: #1f2630;
+    --muted: #64748b;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --border: #dbe3ee;
+    --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.recuperar-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "DM Sans", "Inter", Arial, sans-serif;
+    background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 55%, #eef2ff 100%);
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+}
+
+.recovery-brand {
+    display: flex;
+    align-items: center;
+}
+
+.recovery-brand-logo {
+    width: 58px;
+    height: 58px;
+    display: block;
+    object-fit: contain;
+}
+
+.recovery-card-header {
+    width: 100%;
+    display: flex !important;
+    flex-flow: row nowrap;
+    align-items: flex-start !important;
+    justify-content: space-between;
+    min-height: 0;
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+.recovery-card-header .recovery-brand {
+    flex: 0 0 auto;
+}
+
+.recovery-card-header .nav-login-btn {
+    flex: 0 0 auto;
+}
+
+.nav-login-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 38px;
+    padding: 8px 13px;
+    border-radius: 9px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.nav-login-btn:hover {
+    color: var(--primary);
+    border-color: #bfdbfe;
+    background: #eff6ff;
+}
+
+.recovery-wrapper {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 32px 16px;
+}
+
+.recovery-box {
+    width: 100%;
+    max-width: 460px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 36px;
+    text-align: center;
+}
+
+.recovery-box h3 {
+    font-size: 1.55rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.recovery-box p {
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+.recovery-alert {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1e40af;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.recovery-success {
+    background: #dcfce7;
+    border-color: #86efac;
+    color: #166534;
+}
+
+.recovery-error {
+    background: #fef2f2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+.recovery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.recovery-field {
+    width: 100%;
+}
+
+.recovery-input {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: var(--text);
+    outline: none;
+}
+
+.recovery-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+.recovery-button {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.recovery-button:hover {
+    background: var(--primary-hover);
+}
+
+.recovery-footer-text {
+    margin-top: 20px;
+    margin-bottom: 0 !important;
+}
+
+.recovery-help-text {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: 14px 0 0 !important;
+}
+
+.recovery-footer-text a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.recovery-footer-text a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .recovery-box {
+        padding: 28px;
+    }
+
+    .recovery-card-header {
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+    }
+
+    .recovery-brand-logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .nav-login-btn {
+        padding: 7px 10px;
+        font-size: 0.82rem;
+    }
+}

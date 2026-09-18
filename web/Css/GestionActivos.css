@@ -1,0 +1,331 @@
+.gestion-activos-page {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 55%, #eef2ff 100%);
+    color: #1f2630;
+}
+
+.gestion-activos-page .shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+.gestion-activos-page .sidebar {
+    width: 260px;
+    background: #ffffff;
+    border-right: 1px solid #dbe3ee;
+    padding: 24px;
+}
+
+.gestion-activos-page .sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.gestion-activos-page .brand-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.gestion-activos-page .brand-name {
+    font-weight: 700;
+    display: block;
+}
+
+.gestion-activos-page .brand-page {
+    color: #64748b;
+    font-size: .85rem;
+}
+
+.gestion-activos-page .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gestion-activos-page .sn-item {
+    padding: 12px;
+    border-radius: 10px;
+    color: #475569;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.gestion-activos-page .sn-item:hover {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.gestion-activos-page .sn-item.active {
+    background: #2563eb;
+    color: white;
+}
+
+.gestion-activos-page .main {
+    flex: 1;
+    padding: 32px;
+}
+
+.gestion-activos-page .topbar {
+    margin-bottom: 25px;
+}
+
+.gestion-activos-page .page-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.gestion-activos-page .page-title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.gestion-activos-page .page-sub {
+    color: #64748b;
+}
+
+.gestion-activos-page .btn-registrar {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.gestion-activos-page .btn-registrar:hover {
+    background: #1d4ed8;
+    color: white;
+}
+
+.gestion-activos-page .search-wrap {
+    position: relative;
+    flex: 1;
+    max-width: 450px;
+}
+
+.gestion-activos-page .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+}
+
+.gestion-activos-page .search-input {
+    width: 100%;
+    border: 1px solid #dbe3ee;
+    border-radius: 12px;
+    padding: 12px 12px 12px 45px;
+    background: #fff;
+}
+
+.gestion-activos-page .search-input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.gestion-activos-page .table-card {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, .08);
+}
+
+.gestion-activos-page .table-wrap {
+    overflow-x: auto;
+}
+
+.gestion-activos-page .activos-tbl {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.gestion-activos-page .activos-tbl thead {
+    background: #eff6ff;
+}
+
+.gestion-activos-page .activos-tbl th {
+    padding: 15px;
+    text-align: left;
+    color: #334155;
+    font-weight: 700;
+}
+
+.gestion-activos-page .activos-tbl td {
+    padding: 14px;
+    border-top: 1px solid #edf2f7;
+}
+
+.gestion-activos-page .activos-tbl tbody tr:hover {
+    background: #f8fafc;
+}
+
+.gestion-activos-page .activos-tbl a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.gestion-activos-page .td-qty {
+    font-weight: 600;
+}
+
+.estado-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+    white-space: nowrap;
+}
+
+.estado-badge--success { background: #dcfce7; color: #15803d; }
+.estado-badge--info { background: #dbeafe; color: #1d4ed8; }
+.estado-badge--warning { background: #fef3c7; color: #b45309; }
+.estado-badge--danger { background: #fee2e2; color: #b91c1c; }
+.estado-badge--neutral { background: #e2e8f0; color: #475569; }
+
+.gestion-activos-page .td-qty {
+    color: #2563eb;
+}
+
+.gestion-activos-page .estado-fecha {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .85rem;
+}
+
+.gestion-activos-page .estado-fecha.vigente {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.gestion-activos-page .estado-fecha.devuelto {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.gestion-activos-page .estado-fecha.pendiente {
+    background: #fef3c7;
+    color: #a16207;
+}
+
+.gestion-activos-page .estado-fecha.finalizada {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.gestion-activos-page .estado-fecha.anulada {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.gestion-activos-page .acciones {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gestion-activos-page .acciones form {
+    margin: 0;
+}
+
+.gestion-activos-page .activos-tbl .btn-eliminar,
+.gestion-activos-page .activos-tbl .tbl-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    margin: 0;
+    line-height: 1;
+}
+
+.gestion-activos-page .activos-tbl .btn-eliminar i,
+.gestion-activos-page .activos-tbl .tbl-btn i {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.gestion-activos-page .activos-tbl .tbl-edit {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.gestion-activos-page .activos-tbl .tbl-edit:hover {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.gestion-activos-page .activos-tbl .btn-eliminar {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.gestion-activos-page .activos-tbl .btn-eliminar:hover {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.gestion-activos-page .sin-datos {
+    color: #64748b;
+    text-align: center;
+    padding: 24px;
+}
+
+.gestion-activos-page .alert {
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 992px) {
+    .gestion-activos-page .shell {
+        flex-direction: column;
+    }
+
+    .gestion-activos-page .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #dbe3ee;
+    }
+
+    .gestion-activos-page .page-head {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .gestion-activos-page .search-wrap {
+        max-width: 100%;
+    }
+}

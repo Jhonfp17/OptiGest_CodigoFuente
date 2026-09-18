@@ -1,0 +1,345 @@
+
+
+.gestion-personal-page {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 55%, #eef2ff 100%);
+    color: #1f2630;
+}
+
+.gestion-personal-page .shell{
+    display:flex;
+    min-height:100vh;
+}
+
+.gestion-personal-page .sidebar{
+    width:260px;
+    background:#ffffff;
+    border-right:1px solid #dbe3ee;
+    padding:24px;
+}
+
+.gestion-personal-page .sidebar-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:30px;
+}
+
+.gestion-personal-page .brand-avatar{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+    background:#eff6ff;
+    color:#2563eb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.4rem;
+}
+
+.gestion-personal-page .brand-name{
+    font-weight:700;
+    display:block;
+}
+
+.gestion-personal-page .brand-page{
+    color:#64748b;
+    font-size:.85rem;
+}
+
+.gestion-personal-page .sidebar-nav{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.gestion-personal-page .sn-item{
+    padding:12px;
+    border-radius:10px;
+    color:#475569;
+    display:flex;
+    gap:10px;
+    align-items:center;
+    transition:.2s;
+}
+
+.gestion-personal-page .sn-item:hover{
+    background:#eff6ff;
+    color:#2563eb;
+}
+
+.gestion-personal-page .sn-item.active{
+    background:#2563eb;
+    color:white;
+}
+
+.gestion-personal-page .main{
+    flex:1;
+    padding:32px;
+}
+
+.gestion-personal-page .topbar{
+    margin-bottom:25px;
+}
+
+.gestion-personal-page .page-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    gap:20px;
+}
+
+.gestion-personal-page .page-title{
+    font-size:2rem;
+    font-weight:800;
+}
+
+.gestion-personal-page .page-sub{
+    color:#64748b;
+}
+
+.gestion-personal-page .btn-registrar{
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:12px 18px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    white-space:nowrap;
+}
+
+.gestion-personal-page .btn-registrar:hover{
+    background:#1d4ed8;
+    color:white;
+}
+
+.gestion-personal-page .search-wrap{
+    position:relative;
+    flex:1;
+    max-width:450px;
+}
+
+.gestion-personal-page .search-icon{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#64748b;
+}
+
+.gestion-personal-page .search-input{
+    width:100%;
+    border:1px solid #dbe3ee;
+    border-radius:12px;
+    padding:12px 12px 12px 45px;
+    background:#fff;
+}
+
+.gestion-personal-page .search-input:focus{
+    outline:none;
+    border-color:#2563eb;
+}
+
+.gestion-personal-page .table-card{
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 8px 24px rgba(15,23,42,.08);
+}
+
+.gestion-personal-page .table-wrap{
+    overflow-x:auto;
+}
+
+.gestion-personal-page .personal-tbl{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.gestion-personal-page .personal-tbl thead{
+    background:#eff6ff;
+}
+
+.gestion-personal-page .personal-tbl th{
+    padding:15px;
+    text-align:left;
+    color:#334155;
+    font-weight:700;
+}
+
+.gestion-personal-page .personal-tbl td{
+    padding:14px;
+    border-top:1px solid #edf2f7;
+}
+
+.gestion-personal-page .personal-tbl tbody tr:hover{
+    background:#f8fafc;
+}
+
+.gestion-personal-page .personal-tbl a{
+    text-decoration:none;
+    font-weight:600;
+}
+
+.gestion-personal-page .estado-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+    white-space: nowrap;
+}
+
+.gestion-personal-page .estado-badge--success { background: #dcfce7; color: #15803d; }
+.gestion-personal-page .estado-badge--warning { background: #fef3c7; color: #b45309; }
+.gestion-personal-page .estado-badge--danger { background: #fee2e2; color: #b91c1c; }
+.gestion-personal-page .estado-badge--neutral { background: #e2e8f0; color: #475569; }
+
+.gestion-personal-page .acciones{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.gestion-asignaciones-page .asignacion-fila-oculta {
+    display: none;
+}
+
+.gestion-asignaciones-page .asignaciones-expandir-wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+.gestion-asignaciones-page .btn-ver-mas-asignaciones {
+    border: 1px solid #93c5fd;
+    border-radius: 10px;
+    padding: 9px 16px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+.gestion-asignaciones-page .btn-ver-mas-asignaciones:hover {
+    background: #dbeafe;
+}
+
+.gestion-personal-page .acciones form{
+    margin:0;
+}
+
+.gestion-personal-page .personal-tbl .btn-ver,
+.gestion-personal-page .personal-tbl .btn-eliminar,
+.gestion-personal-page .personal-tbl .tbl-btn{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid transparent;
+    cursor:pointer;
+    padding:0;
+    margin:0;
+    line-height:1;
+}
+
+.gestion-personal-page .personal-tbl .btn-ver i,
+.gestion-personal-page .personal-tbl .btn-eliminar i,
+.gestion-personal-page .personal-tbl .tbl-btn i{
+    font-size:1rem;
+    line-height:1;
+}
+
+.gestion-personal-page .personal-tbl .btn-ver{
+    background:#eff6ff;
+    color:#2563eb;
+}
+
+.gestion-personal-page .personal-tbl .btn-editar{
+    color:#16a34a;
+}
+
+.gestion-personal-page .personal-tbl .btn-eliminar{
+    background:#fef2f2;
+    color:#dc2626;
+}
+
+.gestion-personal-page .alert{
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.gestion-personal-page .clave-generada-panel {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    border-left:5px solid #f59e0b;
+    color:#92400e;
+}
+
+.gestion-personal-page .clave-generada-valor {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-shrink:0;
+}
+
+.gestion-personal-page .clave-generada-valor code {
+    padding:9px 12px;
+    border:1px dashed #f59e0b;
+    border-radius:8px;
+    background:#fff;
+    color:#78350f;
+    font-size:1rem;
+    font-weight:800;
+}
+
+.gestion-personal-page .clave-generada-valor button {
+    border:0;
+    border-radius:8px;
+    padding:9px 13px;
+    background:#b45309;
+    color:#fff;
+    font-size:.82rem;
+    font-weight:700;
+}
+
+.gestion-personal-page .clave-generada-valor button:hover { background:#92400e; }
+
+@media(max-width:992px){
+
+    .gestion-personal-page .shell{
+        flex-direction:column;
+    }
+
+    .gestion-personal-page .sidebar{
+        width:100%;
+        border-right:none;
+        border-bottom:1px solid #dbe3ee;
+    }
+
+    .gestion-personal-page .page-head{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .gestion-personal-page .search-wrap{
+        max-width:100%;
+    }
+
+    .gestion-personal-page .clave-generada-panel {
+        align-items:flex-start;
+        flex-direction:column;
+    }
+}

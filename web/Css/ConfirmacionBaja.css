@@ -1,0 +1,76 @@
+.confirmacion-baja {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, .55);
+}
+
+.confirmacion-baja--visible {
+    display: flex;
+}
+
+.confirmacion-baja__panel {
+    width: min(100%, 460px);
+    border-radius: 14px;
+    padding: 24px;
+    background: #fff;
+    box-shadow: 0 20px 48px rgba(15, 23, 42, .25);
+}
+
+.confirmacion-baja__panel h2 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+}
+
+.confirmacion-baja__panel p {
+    margin: 0 0 16px;
+    color: #475569;
+}
+
+.confirmacion-baja__motivo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.confirmacion-baja__motivo textarea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 10px;
+    font: inherit;
+}
+
+.confirmacion-baja__error {
+    min-height: 1.25rem;
+    color: #b91c1c !important;
+}
+
+.confirmacion-baja__acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.confirmacion-baja__acciones button {
+    border: 0;
+    border-radius: 8px;
+    padding: 9px 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.confirmacion-baja__cancelar {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.confirmacion-baja__aceptar {
+    background: #b91c1c;
+    color: #fff;
+}

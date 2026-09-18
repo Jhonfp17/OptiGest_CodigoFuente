@@ -1,0 +1,175 @@
+
+
+:root {
+    --bg: #f3f6fb;
+    --card: #ffffff;
+    --text: #1f2630;
+    --muted: #64748b;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary: #6b7280;
+    --border: #dbe3ee;
+    --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.registro-personal-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "DM Sans", "Inter", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.registro-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 42px 16px;
+}
+
+.registro-card {
+    width: min(960px, 100%);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 34px;
+}
+
+.registro-header {
+    margin-bottom: 26px;
+}
+
+.registro-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.registro-header p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.registro-alert {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1e40af;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 22px;
+}
+
+.registro-form {
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field-full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    font-weight: 800;
+    color: var(--text);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 11px 14px;
+    color: var(--text);
+    outline: none;
+    background: #ffffff;
+}
+
+.form-field input,
+.form-field select {
+    min-height: 48px;
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 96px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn-cancelar,
+.btn-guardar {
+    min-height: 46px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    background: var(--secondary);
+    color: #ffffff;
+}
+
+.btn-cancelar:hover {
+    background: #4b5563;
+}
+
+.btn-guardar {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.btn-guardar:hover {
+    background: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+    .registro-card {
+        padding: 24px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-cancelar,
+    .btn-guardar {
+        width: 100%;
+    }
+}

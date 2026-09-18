@@ -1,0 +1,23 @@
+:root { --og-blue:#2563eb; --og-blue-dark:#1d4ed8; --og-blue-soft:#eff6ff; --og-text:#1f2630; --og-muted:#475569; --og-border:#dbe3ee; }
+body.historial-page { min-height:100vh; background:linear-gradient(135deg,#eff6ff 0%,#f8fafc 52%,#eef2ff 100%); color:var(--og-text); }
+.historial-wrap { max-width:1240px; }
+.historial-card { background:#fff; border:1px solid var(--og-border); border-radius:18px; box-shadow:0 14px 34px rgba(37,99,235,.08); overflow:hidden; }
+.historial-header { padding:28px 30px 22px; border-bottom:1px solid var(--og-border); }
+.historial-title { margin:0; font-size:clamp(1.7rem,3vw,2.2rem); font-weight:750; color:#172554; }
+.historial-subtitle { color:var(--og-muted); }
+.btn-volver { border-color:#93c5fd; color:var(--og-blue-dark); background:#fff; }
+.btn-volver:hover { background:var(--og-blue-soft); color:var(--og-blue-dark); }
+.historial-filter { margin:24px 30px; padding:20px; background:var(--og-blue-soft); border:1px solid #bfdbfe; border-radius:14px; }
+.historial-filter .form-label { color:#1e3a8a; font-weight:650; }
+.historial-filter .form-control,.historial-filter .form-select { border-color:#bfdbfe; }
+.historial-filter .form-control:focus,.historial-filter .form-select:focus { border-color:var(--og-blue); box-shadow:0 0 0 .2rem rgba(37,99,235,.15); }
+.btn-buscar { background:var(--og-blue); border-color:var(--og-blue); font-weight:650; }
+.btn-buscar:hover { background:var(--og-blue-dark); border-color:var(--og-blue-dark); }
+.historial-table { margin:0; }
+.historial-table thead th { padding:.9rem 1rem; background:#172554; color:#fff; border:0; font-size:.82rem; letter-spacing:.02em; text-transform:uppercase; white-space:nowrap; }
+.historial-table tbody td { padding:.9rem 1rem; color:#334155; border-color:#e7eef8; vertical-align:middle; }
+.historial-table tbody tr:hover { background:#f8fbff; }
+.historial-table .registro-nombre { color:#1e3a8a; font-weight:700; }
+.historial-table .accion { color:var(--og-blue-dark); font-weight:700; }
+.historial-empty { padding:2rem !important; color:var(--og-muted) !important; }
+@media (max-width:576px) { .historial-header { padding:22px 20px 18px; } .historial-filter { margin:18px 20px; padding:16px; } }

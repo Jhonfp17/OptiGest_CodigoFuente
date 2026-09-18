@@ -1,0 +1,30 @@
+:root { --contact-blue:#2563eb; --contact-blue-dark:#1d4ed8; --contact-soft:#eff6ff; --contact-text:#1f2630; --contact-muted:#475569; --contact-border:#dbe3ee; }
+body.contacto-page { min-height:100vh; background:linear-gradient(135deg,#eff6ff 0%,#f8fafc 52%,#eef2ff 100%); color:var(--contact-text); }
+.contacto-wrap { width:min(100%,780px); max-width:780px; }
+.contacto-card { border:1px solid var(--contact-border); border-radius:20px; box-shadow:0 16px 38px rgba(37,99,235,.10); overflow:hidden; }
+.contacto-head { padding:30px 34px 24px; background:linear-gradient(135deg,#fff,#f8fbff); border-bottom:1px solid var(--contact-border); }
+.contacto-back { color:var(--contact-blue-dark); font-weight:600; text-decoration:none; }
+.contacto-back:hover { color:#172554; text-decoration:underline; }
+.contacto-title { color:#172554; font-weight:750; margin:18px 0 6px; }
+.contacto-copy { color:var(--contact-muted); margin:0; }
+.contacto-form { --bs-gutter-x:20px; --bs-gutter-y:18px; margin:0; padding:28px 34px 34px; }
+.contacto-form .form-label { color:#1e3a8a; font-weight:650; margin-bottom:.45rem; }
+.contacto-form .form-control,.contacto-form .form-select { border-color:#bfdbfe; min-height:44px; }
+.contacto-form .form-control,.contacto-form .form-select { color:#1f2937; background:#fff; }
+.contacto-form textarea.form-control { min-height:auto; }
+.contacto-form .form-control:focus,.contacto-form .form-select:focus { border-color:var(--contact-blue); box-shadow:0 0 0 .2rem rgba(37,99,235,.15); }
+.contacto-privacy { padding:12px 14px; border:1px solid #bfdbfe; background:var(--contact-soft); border-radius:10px; color:#334155; }
+.contacto-submit { min-height:44px; padding:.7rem 1.35rem; background:var(--contact-blue); border-color:var(--contact-blue); font-weight:700; }
+.contacto-submit:hover { background:var(--contact-blue-dark); border-color:var(--contact-blue-dark); }
+@media (min-width:577px) and (max-width:1024px) { .contacto-wrap { padding-top:34px!important; padding-bottom:34px!important; } }
+@media (max-width:576px) {
+    .contacto-wrap { padding:20px 12px!important; }
+    .contacto-card { border-radius:16px; }
+    .contacto-head { padding:24px 20px 20px; }
+    .contacto-title { font-size:1.45rem; line-height:1.18; margin-top:16px; }
+    .contacto-form { --bs-gutter-x:16px; --bs-gutter-y:16px; padding:22px 20px 24px; }
+    .contacto-form .form-control,.contacto-form .form-select { min-height:46px; }
+    .contacto-form textarea.form-control { min-height:112px; }
+    .contacto-submit { width:100%; }
+    .contacto-privacy { padding:12px; }
+}

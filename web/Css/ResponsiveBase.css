@@ -1,0 +1,241 @@
+/* Reglas compartidas para que todas las vistas de OptiGest funcionen en móvil. */
+*, *::before, *::after { box-sizing: border-box; }
+/* La página no debe desplazarse de lado: las tarjetas de datos sí lo hacen internamente. */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, svg, video, canvas { max-width: 100%; height: auto; }
+input, select, textarea { max-width: 100%; }
+
+@media (max-width: 768px) {
+    body { font-size: 15px; }
+    .container, .container-fluid, main, .main-content, .right-side, .content { width: 100%; max-width: 100%; padding-left: 16px; padding-right: 16px; }
+    .sidebar, .perfil-sidebar, body.gestion_activo .sidebar, .gestion-personal-page .sidebar { position: static !important; width: 100% !important; min-height: auto !important; padding: 14px 16px !important; border-right: 0; border-bottom: 1px solid #dbe3ee; }
+    body.gestion_activo .right-side { margin-left: 0 !important; padding: 18px 16px !important; }
+    .sidebar-nav { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+    .sn-item, .gestion-personal-page .sn-item, .perfil-nav-item { flex: 1 1 145px; }
+    .sn-item.logout-bottom, .perfil-nav-item.logout-bottom { position: static; margin-top: 8px !important; }
+    .panel-navbar, .panel-nav-actions, .page-header, .header-actions, .gestion-header, .gc-header { flex-wrap: wrap; gap: 12px; }
+    .panel-navbar { padding: 14px 16px; }
+    .panel-nav-actions { width: 100%; justify-content: space-between; }
+    .panel-profile-link span, .panel-logout-link span { display: none; }
+    .panel-main, .panel-page main { padding: 20px 16px; }
+    .panel-grid, .form-row, .form-grid, .registro-grid, .dashboard-grid { grid-template-columns: 1fr !important; }
+    .card, .registro-card, .table-card, .data-card { border-radius: 14px !important; }
+    .btn, .btn-registrar, .btn-guardar, .btn-cancelar { min-height: 44px; }
+    .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table { font-size: .84rem; } table th, table td { white-space: nowrap; }
+    .modal-dialog { margin: 12px; max-width: calc(100% - 24px); }
+
+    /* Gestión de personal: en móvil el menú siempre es compacto; no es un panel vertical. */
+    .gestion-personal-page .shell { display: block !important; min-height: 0 !important; }
+    .gestion-personal-page .sidebar {
+        display: block !important; height: auto !important; min-height: 0 !important;
+        max-height: none !important; padding: 16px !important;
+    }
+    .gestion-personal-page .sidebar-brand { margin: 0 0 12px !important; justify-content: center; }
+    .gestion-personal-page .sidebar-nav {
+        display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        flex-direction: initial !important; align-items: stretch !important;
+        justify-content: initial !important; gap: 8px !important; height: auto !important;
+    }
+    .gestion-personal-page .sidebar-nav .sn-item {
+        display: flex !important; min-height: 44px !important; padding: 10px !important;
+        margin: 0 !important; justify-content: flex-start !important; white-space: nowrap;
+    }
+    .gestion-personal-page .sidebar-nav .sn-item:last-child { grid-column: 1 / -1; }
+    .gestion-personal-page .main { width: 100% !important; padding: 20px 16px !important; }
+    .gestion-personal-page .menu-toggle, .gestion-personal-page .sidebar-overlay { display: none !important; }
+
+    /* Gestión de activos usa la misma barra compacta que Gestión de Personal. */
+    .gestion-activos-page .shell { display: block !important; min-height: 0 !important; }
+    .gestion-activos-page .sidebar { height: auto !important; min-height: 0 !important; padding: 16px !important; }
+    .gestion-activos-page .sidebar-brand { margin: 0 0 12px !important; justify-content: center; }
+    .gestion-activos-page .sidebar-nav {
+        display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        flex-direction: initial !important; justify-content: initial !important; gap: 8px !important;
+    }
+    .gestion-activos-page .sidebar-nav .sn-item { min-height: 44px !important; padding: 10px !important; margin: 0 !important; }
+    .gestion-activos-page .sidebar-nav .sn-item:last-child { grid-column: 1 / -1; }
+    .gestion-activos-page .main { width: 100% !important; padding: 20px 16px !important; }
+    .gestion-activos-page .menu-toggle, .gestion-activos-page .sidebar-overlay { display: none !important; }
+
+    /* Perfil: evita que el menú lateral y el contenido compitan por el ancho. */
+    .perfil-shell { display: block !important; min-height: 0 !important; }
+    .perfil-sidebar { width: 100% !important; min-height: 0 !important; padding: 16px !important; }
+    .perfil-logo { margin: 0 0 12px !important; justify-content: center; }
+    .perfil-nav { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px !important; }
+    .perfil-nav-item { min-width: 0; min-height: 44px; padding: 10px !important; }
+    .perfil-nav-item:last-child { grid-column: 1 / -1; }
+    .perfil-main { width: 100% !important; padding: 20px 16px !important; }
+    .perfil-page .menu-toggle, .perfil-page .sidebar-overlay { display: none !important; }
+}
+
+@media (max-width: 420px) {
+    .panel-brand-logo, .brand-logo-image { max-width: 112px; }
+    .page-title, .panel-header h1 { font-size: 1.55rem; }
+    .sidebar-nav { display: grid; grid-template-columns: 1fr 1fr; }
+    .sn-item, .gestion-personal-page .sn-item, .perfil-nav-item { min-width: 0; padding: 10px; }
+    .sidebar-nav .logout-bottom { grid-column: 1 / -1; }
+}
+
+/* Formato visual unificado: interfaz y datos no sensibles en mayúsculas. */
+h1, h2, h3, h4, h5, h6,
+label, legend, button, .btn, .page-title, .page-sub, .sidebar-nav,
+.perfil-nav, .sn-item, .panel-header, .card-title, th,
+.form-select, select, input[type="text"], input[type="search"], textarea,
+td, .alert, .badge, .nav-link, .dropdown-item {
+    text-transform: uppercase;
+}
+
+/* Credenciales, correo y enlaces deben conservar el texto exacto ingresado. */
+input[type="email"], input[type="password"], input[type="url"],
+input[name*="clave" i], input[name="pass"], code, pre,
+a[href^="mailto:"], .email, .sensible {
+    text-transform: none !important;
+}
+
+/* Ajustes transversales para pantallas táctiles y resoluciones intermedias. */
+html { -webkit-text-size-adjust: 100%; }
+body, main, .main, .main-content, .right-side, .content, .perfil-main { min-width: 0; }
+button, input, select, textarea { font: inherit; }
+.table-wrap, .table-responsive {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+}
+.table-wrap > table, .table-responsive > table { min-width: max-content; }
+.table-wrap::-webkit-scrollbar, .table-responsive::-webkit-scrollbar { height: 10px; }
+.table-wrap::-webkit-scrollbar-thumb, .table-responsive::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 999px;
+}
+
+/* Guías y errores de validación visibles junto a cada campo. */
+.field-help, .field-error {
+    display: block;
+    margin-top: 6px;
+    font-size: .78rem;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+.field-help { color: #64748b; }
+.field-error { color: #b91c1c; font-weight: 700; }
+input.is-invalid, select.is-invalid, textarea.is-invalid {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 0 .18rem rgba(220, 38, 38, .14) !important;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .registro-wrapper { padding: 32px 24px; }
+    .registro-card { padding: 28px; }
+    .catalogo-container { margin: 32px auto; padding: 0 24px; }
+    .panel-main { width: min(100% - 48px, 1280px); padding: 36px 0; }
+    .panel-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .panel-grid { grid-template-columns: 1fr; }
+    .gestion-personal-page .main, .gestion-activos-page .main,
+    body.gestion_activo .right-side { min-width: 0 !important; }
+}
+
+@media (max-width: 768px) {
+    /* Evita el zoom automático de iOS y conserva controles cómodos al tacto. */
+    input, select, textarea { font-size: 16px !important; }
+    button, .btn, .btn-registrar, .btn-guardar, .btn-cancelar,
+    .btn-nuevo, .btn-volver, .btn-editar, .btn-eliminar, .tbl-btn {
+        min-height: 44px;
+    }
+
+    .registro-wrapper { align-items: flex-start; padding: 20px 12px; }
+    .registro-card { width: 100%; padding: 20px 16px; }
+    .registro-header { margin-bottom: 20px; }
+    .registro-header h2 { font-size: 1.5rem; }
+    .form-grid { gap: 16px; }
+    .form-field-full { grid-column: auto; }
+    .form-actions { margin-top: 24px; gap: 10px; }
+
+    .catalogo-container { margin: 20px auto; padding: 0 12px; }
+    .catalogo-card { padding: 16px; border-radius: 14px; }
+    .catalogo-header h1 { font-size: 1.55rem; }
+    .catalogo-actions { flex-wrap: wrap; }
+    .catalogo-actions .btn-volver, .catalogo-actions .btn-nuevo { min-width: 0; }
+    .acciones { min-width: 128px; }
+
+    .panel-main { width: 100%; padding: 24px 16px; }
+    .panel-header { margin-bottom: 28px; }
+    .panel-header h1 { font-size: 1.75rem; }
+    .panel-actions { gap: 16px; margin-bottom: 28px; }
+    .action-card { min-height: 0; padding: 22px 16px; }
+    .panel-card-body { padding: 18px 14px; }
+
+    .modal-content { max-height: calc(100vh - 24px); overflow-y: auto; }
+    .modal-footer { flex-wrap: wrap; gap: 8px; }
+    .modal-footer > * { flex: 1 1 140px; }
+}
+
+@media (max-width: 420px) {
+    .registro-card { padding: 18px 14px; border-radius: 12px; }
+    .registro-alert { padding: 10px 12px; }
+    .catalogo-actions { display: grid; grid-template-columns: 1fr; }
+    .catalogo-actions .btn-volver, .catalogo-actions .btn-nuevo { width: 100%; }
+    .panel-brand { min-width: 0; }
+    .panel-brand-text { font-size: 1rem; overflow-wrap: anywhere; }
+}
+
+/* Contención común para las vistas administrativas en teléfono y tableta. */
+@media (max-width: 1024px) {
+    .shell, .panel-page, .panel-navbar, .panel-main, .panel-grid,
+    .gestion-personal-page, .gestion-activos-page, .perfil-shell,
+    .perfil-main, .catalogo-container, .historial-wrap, .gc-wrap,
+    .contacto-wrap, .registro-wrapper {
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .table-card, .data-card, .registro-card, .catalogo-card, .panel-card,
+    .feature-card, .benefits-box, .gc-request, .contacto-card, .perfil-card {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* Los datos anchos se recorren dentro de su tarjeta, no mueven toda la página. */
+    .table-card, .data-card, .catalogo-card, .panel-card, .gc-request {
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x pan-y;
+        overscroll-behavior-x: contain;
+        scrollbar-width: thin;
+    }
+
+    .table-card > .row, .data-card > .row, .registro-card > .row,
+    .catalogo-card > .row, .panel-card > .row, .gc-request > .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .row > [class*="col-"], .form-grid > *, .panel-grid > *,
+    .dashboard-grid > *, .registro-grid > * {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .panel-navbar { width: 100%; min-width: 0; }
+    .panel-brand { justify-content: center; }
+    .panel-nav-actions { gap: 8px; }
+    .panel-nav-actions > a { min-width: 44px; min-height: 44px; justify-content: center; }
+
+    .page-head, .catalogo-header, .historial-header, .gc-header,
+    .form-actions, .catalogo-actions, .header-actions, .action-group {
+        min-width: 0;
+        flex-wrap: wrap;
+    }
+
+    .form-actions > *, .catalogo-actions > *, .header-actions > *, .action-group > * {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,70 @@
+body.config-page{
+    background:#f3f6fb;
+    color:#1f2630;
+}
+
+.section-title{
+    margin-bottom:20px;
+    font-weight:700;
+    color:var(--text);
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.config-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+    text-decoration:none;
+    color:#2563eb;
+    background:#fff;
+
+    height:150px;
+
+    border:1px solid #dbe3ee;
+    border-radius:18px;
+
+    box-shadow:0 8px 24px rgba(15,23,42,.08);
+
+    transition:.3s;
+
+    margin-bottom:12px; /* Espacio vertical entre filas */
+}
+
+.config-card:hover{
+    transform:translateY(-5px);
+
+    color:#1d4ed8;
+    border-color:#2563eb;
+    background:#eff6ff;
+
+    box-shadow:0 12px 28px rgba(37,99,235,.16);
+}
+
+.config-card i{
+    font-size:45px;
+}
+
+.config-card h5{
+    margin:0;
+    font-weight:700;
+    color:#1f2630;
+}
+
+.config-card:hover h5{
+    color:#1d4ed8;
+}
+
+.config-page h1{
+    color:#2563eb;
+    font-weight:800;
+}
+
+/* Espaciado entre filas Bootstrap */
+.row + .row{
+    margin-top:24px;
+}
