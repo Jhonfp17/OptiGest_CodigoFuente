@@ -4,3 +4,6 @@
 /.railway-build/
 /dist/
 /.gfclient/
+
+/dist/
+/.gfclient/
